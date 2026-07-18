@@ -1,33 +1,39 @@
 ---
 layout: default
-title: Preguntas Frecuentes
+title: FAQ
 lang: es
 ---
 
-## ¿Un bootloader desbloqueable degrada la seguridad de mi dispositivo?
+## Desbloquear el bootloader, ¿vuelve mi teléfono menos seguro?
 
-**En absoluto.** Siempre que no actives intencionalmente la opción de desbloqueo OEM y conectes tu teléfono a una computadora para desbloquear el bootloader (un procedimiento que siempre borrará tus datos), tu teléfono permanece en el estado bloqueado original, que es completamente seguro.
+**Para nada.** Mientras no actives la opción de desbloqueo OEM y conectes el teléfono a un ordenador para desbloquear el bootloader (un proceso que borra todos tus datos), tu teléfono se queda en su estado bloqueado de fábrica — tan seguro como el primer día.
 
-De hecho, un bootloader desbloqueable ayuda a tu seguridad y privacidad, ya que permite a los investigadores de ciberseguridad inspeccionar el firmware preinstalado en busca de posibles malware y telemetría no consentida.
+De hecho, un bootloader desbloqueable *mejora* tu seguridad y privacidad: permite a los investigadores de ciberseguridad inspeccionar el firmware preinstalado en busca de malware o telemetría no consentida.
 
-## ¿La Directiva RED de la UE (2014/53/UE) exige que los dispositivos estén bloqueados?
+## ¿La directiva europea RED (2014/53/UE) exige el bloqueo?
 
-Muchas personas citan el Artículo 3(3)(i) de la Directiva RED como la razón por la cual los OEM tienen que bloquear el bootloader permanentemente. Pero esto es **totalmente incorrecto**. El Artículo establece:
+Mucha gente cita el artículo 3(3)(i) de la directiva RED como justificación. Pero es **totalmente falso**. Esto es lo que dice el texto original:
 
-> el equipo de radio admite ciertas funciones para garantizar que el software solo pueda cargarse en el equipo de radio cuando se haya demostrado la conformidad de la combinación del equipo de radio y el software.
+> radio equipment supports certain features in order to ensure that software can only be loaded into the radio equipment where the compliance of the combination of the radio equipment and software has been demonstrated.
 
-En el contexto de un dispositivo móvil inteligente, el "equipo de radio" se refiere al [procesador de banda base](https://en.wikipedia.org/wiki/Baseband_processor). Este Artículo efectivamente requiere mediciones criptográficas para garantizar que solo se pueda cargar el **firmware de banda base** auténtico firmado por el fabricante del chip — lo cual se ha implementado universalmente durante años sin depender del bloqueo del OEM.
+> _Traducción_ : los equipos radioeléctricos deberán admitir ciertas funciones para garantizar que el software solo pueda cargarse en el equipo radioeléctrico cuando se haya demostrado la conformidad de la combinación del equipo radioeléctrico y el software.
 
-La verdadera intención de la directiva es asegurar que los dispositivos no interfieran con las frecuencias públicas de emergencia, las redes celulares o las comunicaciones aeronáuticas.
+El «equipo radioeléctrico» aquí se refiere al [procesador de banda base](https://en.wikipedia.org/wiki/Baseband_processor) (el módem), no al teléfono entero. Este artículo exige que el firmware de la parte radio esté firmado criptográficamente — una medida implementada universalmente desde hace años, que no tiene nada que ver con el bloqueo OEM ni con la capacidad del usuario de flashear un sistema.
 
-De hecho, los reguladores de la UE previeron explícitamente que los fabricantes codiciosos podrían intentar usar esta directiva como un arma para bloquear sus dispositivos y eliminar la competencia. Para evitar esto, escribieron el Considerando 19 directamente en la directiva:
+El verdadero propósito de esta directiva es evitar que los dispositivos interfieran con frecuencias de emergencia, redes móviles o comunicaciones aeronáuticas. No impedir que los usuarios instalen el sistema que quieran.
 
-> La verificación por parte del equipo de radio de la conformidad de su combinación con el software no debe ser utilizada de manera abusiva para impedir su uso con software proporcionado por partes independientes. La disponibilidad para las autoridades públicas, los fabricantes y los usuarios de información sobre la conformidad de las combinaciones previstas de equipo de radio y software debe contribuir a facilitar la competencia. Para lograr esos objetivos, debe delegarse en la Comisión la facultad de adoptar actos de conformidad con el Artículo 290 del TFUE respecto de la especificación de categorías o clases de equipo de radio para las cuales los fabricantes deben proporcionar información sobre la conformidad de las combinaciones previstas de equipo de radio y software con los requisitos esenciales establecidos en la presente Directiva.
+De hecho, los reguladores europeos ya anticiparon que algunos fabricantes usarían esta directiva como excusa para bloquear dispositivos y matar la competencia. Por eso incluyeron el Considerando 19:
 
-## ¿Alguna regulación china exige el bloqueo?
+> Verification by radio equipment of the compliance of its combination with software should not be abused in order to prevent its use with software provided by independent parties. The availability to public authorities, manufacturers and users of information on the compliance of intended combinations of radio equipment and software should contribute to facilitate competition. In order to achieve those objectives, the power to adopt acts in accordance with Article 290 TFEU should be delegated to the Commission in respect of the specification of categories or classes of radio equipment for which manufacturers have to provide information on the compliance of intended combinations of radio equipment and software with the essential requirements set out in this Directive.
 
-Actualmente no existen leyes o regulaciones chinas que exijan un bootloader bloqueado permanentemente. Si bien hubo personas que se referían a [esta regulación](https://www.gov.cn/zhengce/zhengceku/2022-12/15/content_5732079.htm) como la razón del bloqueo del bootloader de Xiaomi, esta afirmación es probablemente falsa.
+> _Traducción_ : la verificación por parte del equipo radioeléctrico de la conformidad de su combinación con el software no debe ser utilizada de forma abusiva para impedir su uso con software proporcionado por terceros independientes. La disponibilidad para las autoridades públicas, los fabricantes y los usuarios de información sobre la conformidad de las combinaciones previstas de equipo radioeléctrico y software debe contribuir a facilitar la competencia.
 
-Si bien esa regulación requiere "medidas técnicas para prevenir ataques a la cadena de suministro", no exige que los dispositivos estén bloqueados permanentemente después de llegar a las manos del usuario final. Además, OnePlus todavía vende dispositivos en China con un bootloader desbloqueable, lo que refuta la existencia de cualquier ley o regulación de este tipo.
+En cristiano: no puedes usar la directiva RED para impedir que la gente instale otros sistemas.
 
-Por lo tanto, los fabricantes no están obligados a bloquear tu dispositivo. Eligen hacerlo para su propio beneficio.
+## ¿Y la regulación china? ¿Exige el bloqueo?
+
+**No.** No existe ninguna ley o regulación china que exija el bloqueo permanente del bootloader. Algunos mencionan [este texto de 2022](https://www.gov.cn/zhengce/zhengceku/2022-12/15/content_5732079.htm) del Ministerio de Industria y Tecnología de la Información, pero es una interpretación abusiva. Ese texto habla de medidas técnicas para prevenir ataques a la cadena de suministro — no tiene nada que ver con bloquear los dispositivos una vez que están en manos de los consumidores.
+
+Si existiera una ley así, OnePlus no podría vender en China dispositivos con el bootloader desbloqueable. Y los vende.
+
+Los fabricantes no están obligados a bloquear tus dispositivos. Lo hacen porque les conviene.

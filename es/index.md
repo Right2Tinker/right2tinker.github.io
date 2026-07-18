@@ -6,138 +6,133 @@ lang: es
 
 <p><em>Nota: Este documento ha sido traducido por una IA. Para la versión original, consulte la <a href="/">versión en inglés</a>.</em></p>
 
-## El Problema: Tu Teléfono Ya No Te Pertenece
+## El problema: tu teléfono ya no es tuyo
 
-Puede que ya sepas que el ecosistema móvil de Apple está fuertemente cerrado — solo puedes instalar aplicaciones desde la App Store, y solo puedes ejecutar iOS en tu dispositivo. Android alguna vez fue diferente. Era amado por aquellos que querían *poseer* verdaderamente sus dispositivos, gracias a su apertura y la libertad de experimentar.
+Seguro que sabes que el ecosistema de Apple está cerradísimo — solo puedes instalar apps desde la App Store, y solo puedes usar iOS. Android era diferente. Era el favorito de quienes querían *poseer* de verdad sus dispositivos, gracias a su apertura y la libertad de trastear.
 
-Pero esa era está terminando.
+Esa época se está acabando.
 
-Para entender lo que ha sucedido, primero debemos explicar el [**bloqueo del OEM**](https://source.android.com/docs/core/architecture/bootloader/locking_unlocking) (o "bloqueo del bootloader") — un componente de seguridad crítico en los teléfonos Android. Cuando un dispositivo está bloqueado, impide que alguien altere el sistema operativo preinstalado. Esto protege a los usuarios de malware. Todos los teléfonos Android modernos se envían en este estado bloqueado.
+Para entender lo que ha pasado, primero hay que explicar el [**bloqueo OEM**](https://source.android.com/docs/core/architecture/bootloader/locking_unlocking) (o «bloqueo del bootloader») — un componente de seguridad clave en los Android. Cuando está bloqueado, impide que cualquiera modifique el sistema operativo preinstalado. Protege contra malware. Todos los Android modernos salen de fábrica bloqueados.
 
-Pero esto también significa que los usuarios que *quieren* modificar sus propios teléfonos son bloqueados por este mismo mecanismo.
+Pero también significa que los usuarios que *quieran* modificar su propio teléfono se topan con ese mismo mecanismo.
 
-Históricamente, los fabricantes proporcionaban formas oficiales para que los usuarios **desbloquearan** sus dispositivos — bajo su propio riesgo — para que pudieran recuperar el control total. Pero en los últimos años, un fabricante tras otro ha eliminado silenciosamente estas opciones. Hoy en día, la mayoría de los dispositivos en el mercado están bloqueados para siempre.
+Antes, los fabricantes ofrecían formas oficiales de **desbloquear** el dispositivo — bajo responsabilidad del usuario — para recuperar el control total. Pero en los últimos años, uno tras otro, han ido eliminando estas opciones. Hoy, la mayoría de los dispositivos en el mercado están bloqueados para siempre.
 
-En 2025, la situación empeoró significativamente. Samsung eliminó la opción de Desbloqueo OEM de las Opciones de Desarrollador en One UI 8. Xiaomi desmanteló sus servidores de desbloqueo heredados y limitó a los usuarios a desbloquear solo un dispositivo por año. Peor aún, Google ha planeado restringir por completo la libertad de instalar aplicaciones fuera de Play Store. Solo una fuerte protesta pública — el movimiento [**Keep Android Open**](https://keepandroidopen.org/) — frenó estos planes.
+En 2025 la cosa empeoró. Samsung eliminó la opción de desbloqueo OEM en One UI 8. Xiaomi lo ha vuelto prácticamente imposible. Google mismo planeaba restringir la instalación de apps fuera de la Play Store — solo una protesta masiva, el movimiento [**Keep Android Open**](https://keepandroidopen.org/), frenó sus planes.
 
-La cronología de estos eventos de bloqueo, así como el estado actual de la libertad de experimentar en el mundo Android, están bien documentados por el proyecto [**Bootloader Unlock Wall of Shame**](https://github.com/zenfyrdev/bootloader-unlock-wall-of-shame).
+La cronología de estos bloqueos y el estado actual de la libertad de trastear en el mundo Android están documentados por el proyecto [**Bootloader Unlock Wall of Shame**](https://github.com/zenfyrdev/bootloader-unlock-wall-of-shame).
 
-Cuando tu dispositivo está permanentemente bloqueado, **ya no posees verdaderamente el dispositivo que posees legalmente**.
+Cuando tu dispositivo está bloqueado permanentemente, **ya no eres verdaderamente dueño de lo que legalmente te pertenece**.
 
+## A qué extremos tiene que llegar la gente solo para trastear
 
-## Lo Que La Gente Se Ve Obligada a Hacer Solo Para Experimentar
+Hay entusiastas forzados a medidas desesperadas por recuperar el control de lo que es suyo:
 
-En su pura voluntad de recuperar el control, los entusiastas han sido llevados a medidas extremas:
+- Usuarios de Xiaomi han tenido que [**arrancar físicamente sus teléfonos de los centros de servicio**](https://www.reddit.com/r/PocoPhones/comments/1mak843/xiaomi_users_escape_service_centers_with/) durante un downgrade para aprovechar una ventana de desbloqueo.
+- Un comprador británico de Zenfone [**demandó a ASUS**](https://xdaforums.com/t/court-action-against-asus-false-promise-on-bootloader-unlock-tool.4657042/) por incumplir su promesa de proporcionar herramientas de desbloqueo. Y ganó — le devolvieron las 770 £ enteras.
 
-- Usuarios de Xiaomi han recurrido a [**tomar físicamente sus teléfonos de los centros de servicio**](https://www.reddit.com/r/PocoPhones/comments/1mak843/xiaomi_users_escape_service_centers_with/) durante procedimientos de degradación, esperando aprovechar una ventana fugaz para desbloquear sus dispositivos.
-- Un comprador británico de Zenfone [**demandó a ASUS**](https://xdaforums.com/t/court-action-against-asus-false-promise-on-bootloader-unlock-tool.4657042/) después de que la empresa incumpliera su promesa de proporcionar herramientas de desbloqueo del bootloader. El comprador ganó — recibiendo un reembolso completo de £770. ASUS había prometido estas herramientas, luego las deshabilitó, e incluso eliminó las discusiones sobre el desbloqueo del bootloader de sus foros.
+Es trágico que alguien tenga que llegar tan lejos solo para trastear con lo que es legalmente suyo.
 
-Es una tragedia que las personas tengan que llegar a tales extremos simplemente para experimentar con algo que poseen legalmente.
+Y aquí está lo clave: **el bloqueo OEM no afecta solo a los «geeks». Es una amenaza para la seguridad, la privacidad y los derechos del consumidor de *cada usuario de smartphone*.**
 
-Pero aquí está el punto crucial: **el bloqueo del OEM no afecta solo a los "geeks". Representa una gran amenaza para la seguridad, la privacidad y los derechos del consumidor para *cada usuario de teléfonos inteligentes*.**
+## Por qué los fabricantes te cierran la puerta de tu propio dispositivo
 
+Los fabricantes tienen excusas. Veamos una por una.
 
-## ¿Por Qué los Fabricantes Te Bloquean el Acceso a Tu Propio Dispositivo?
+### «Lo exigen las leyes. »
 
-Cuando se les pregunta, los fabricantes ofrecen varias justificaciones. Examinemos cada una.
+Los OEM y algunos miembros de la comunidad Android señalan varias leyes y regulaciones locales. Pero no son **más que chivos expiatorios**. No existe **ninguna ley conocida en el mundo** que exija que un teléfono esté bloqueado para siempre. Consulta nuestra [FAQ](/es/faq).
 
-### "Está exigido por leyes y regulaciones."
+### «Disuade a los ladrones. »
 
-Los OEM, así como algunos miembros de la comunidad de desarrollo de Android, a menudo señalan varias leyes y regulaciones locales para el bloqueo del bootloader. Sin embargo, estos son **nada más que chivos expiatorios convenientes** y actualmente **no existe ninguna ley o regulación conocida en el mundo** que requiera que un teléfono esté bloqueado para siempre. Consulte nuestra [FAQ](/faq) para más detalles.
+Supuestamente, un bootloader bloqueado permite implementar mecanismos antirrobo inquebrantables.
 
-### "Desalienta a los ladrones."
+Pero el bootloader ya viene **bloqueado de fábrica**. Sin desbloquearlo antes, un mecanismo antirrobo puede **impedir que un ladrón desbloquee el bootloader** sin problemas. Además, aunque esté bloqueado, un teléfono robado se puede desmontar y vender por piezas. Este argumento no se sostiene.
 
-Los fabricantes a menudo explican que un bootloader bloqueado les permite implementar mecanismos antirrobo que no se pueden vulnerar fácilmente.
+### «Evita que infecten el firmware. »
 
-Pero los bootloaders ya están **bloqueados por defecto**, y sin que esté ya desbloqueado, un mecanismo antirrobo puede fácilmente **impedir que un ladrón desbloquee el bootloader** por completo. Además, incluso con los bloqueos actuales, los dispositivos robados aún pueden ser desmontados y vendidos por piezas. Este argumento no se sostiene.
+Un bootloader desbloqueable podría, según ellos, permitir a atacantes plantar malware en lo más profundo del firmware.
 
-### "Evita que los atacantes instalen malware."
+Pero esto requiere **acceso físico** al dispositivo, saltarse las pruebas de propiedad, y pasar por un procedimiento que **borra todos tus datos** — te darías cuenta al instante. Para la inmensa mayoría de los usuarios, este escenario es ciencia ficción. Las funciones de seguridad por hardware (como el [TEE](https://en.wikipedia.org/wiki/Trusted_execution_environment)) ya hacen detectables estos ataques — verás un aviso al reiniciar, y las herramientas de atestación reportarán anomalías.
 
-Los fabricantes también argumentan que un bootloader desbloqueable puede permitir que los atacantes instalen malware profundamente en el firmware que es difícil de detectar.
+### «Reduce los costes de soporte. »
 
-Pero esto requeriría **acceso físico** a tu dispositivo, eludiendo los posibles requisitos de prueba de propiedad para desbloquear el bootloader, que es un procedimiento que **borrará tus datos** (según lo exige el esquema de seguridad existente) — algo que notarías de inmediato. Para la gran mayoría de los usuarios, este modelo de amenaza es ficticio. Además, las funciones de seguridad respaldadas por hardware (por ejemplo, el [TEE](https://en.wikipedia.org/wiki/Trusted_execution_environment)) ya hacen que tales ataques sean detectables — verás una pantalla de advertencia cada vez que reinicies tu teléfono, y las herramientas de atestación de dispositivos reportarán anomalías.
+La comunidad de trasteo es ínfima. Los fabricantes ya tienen el derecho legal de anular la garantía al desbloquear. Esta excusa es una cortina de humo.
 
-### "Reduce los costos de soporte al cliente."
+## Lo que realmente está pasando
 
-La comunidad de experimentación es demostrablemente pequeña. Los fabricantes ya tienen el derecho legal de anular la garantía al desbloquear. Esta excusa es una cortina de humo.
+### 1. Degradación remota del rendimiento
 
+Algunos fabricantes han montado sistemas para [**controlar el rendimiento de tu teléfono a distancia**](https://www.bilibili.com/video/BV1rUhXzEEde) (NOTA: el enlace es a una plataforma china; hay subtítulos en inglés disponibles) — a menudo para empeorarlo, mucho después de la compra.
 
-## Lo Que Realmente Está Sucediendo
+Usuarios han documentado cómo ciertos dispositivos se vuelven más lentos de repente — no por el desgaste del hardware, sino por políticas en la nube que limitan el rendimiento deliberadamente. Un teléfono que iba fino se vuelve torpe en un año, porque el fabricante ajusta a distancia las frecuencias de la CPU y la planificación. Este sistema — a veces llamado «control en la nube» — pisotea la planificación local con mayor prioridad.
 
-### 1. Degradación Remota del Rendimiento
+### 2. Restricciones artificiales de funciones
 
-Algunos fabricantes han construido sistemas que les permiten [**controlar remotamente el rendimiento de tu teléfono**](https://www.bilibili.com/video/BV1rUhXzEEde) (NOTA: Este enlace apunta a una plataforma de video china. Hay subtítulos generados automáticamente con traducción al inglés disponibles) — a menudo negativamente — mucho después de que lo hayas comprado.
+Los fabricantes retrasan o bloquean deliberadamente la llegada de nuevas funciones a los modelos antiguos — aunque sean técnicamente compatibles y no requieran ningún porte.
 
-Los usuarios han documentado cómo ciertos dispositivos se vuelven repentinamente más lentos con el tiempo — no por el envejecimiento del hardware, sino por políticas controladas en la nube que degradan deliberadamente el rendimiento. Un teléfono que funcionaba sin problemas en el momento de la compra puede volverse notablemente lento en un año, a medida que los fabricantes ajustan remotamente las frecuencias de la CPU y la planificación. El sistema que permite esto — a veces llamado "control en la nube" — anula la planificación propia del dispositivo con mayor prioridad, permitiendo al fabricante dictar el rendimiento desde lejos.
+Pasa una y otra vez: el fabricante dice que una función es incompatible, y la comunidad descubre que funciona perfectamente una vez sorteadas las restricciones artificiales.
 
-### 2. Restricciones Artificiales de Funciones
+### 3. Malware oculto en el firmware
 
-Los fabricantes a menudo retrasan o niegan deliberadamente la implementación de nuevas funciones de software en dispositivos más antiguos — incluso cuando esos dispositivos son técnicamente completamente compatibles y no requieren portabilidad adicional.
+En 2025, investigadores descubrieron [**Keenadu**](https://www.kaspersky.com/about/press-releases/kaspersky-discovers-keenadu-a-multifaceted-android-malware-that-can-come-preinstalled-on-new-devices) — una puerta trasera preinstalada directamente en el firmware durante la fabricación. El código malicioso se inyecta en `libandroid_runtime.so`, una biblioteca central de Android, permitiéndole acceder al espacio de direcciones de *todas* las aplicaciones. Sus capacidades son casi ilimitadas: sus módulos se descargan dinámicamente y se actualizan a distancia.
 
-Ha sucedido repetidamente que un fabricante afirma que una función es incompatible con un dispositivo antiguo determinado, solo para que la comunidad de experimentación descubra que la función funciona perfectamente una vez que se eluden ciertas restricciones artificiales.
+Del mismo modo, el troyano [**Triada**](https://www.kaspersky.com/blog/trojan-in-fake-smartphones/53331/) se infiltra en las particiones del sistema e infecta el proceso Zygote — el padre de todas las aplicaciones Android. Una vez infectado, todo el dispositivo está comprometido: modificación de direcciones de carteras crypto, robo de credenciales, interceptación de mensajes…
 
-### 3. Malware Oculto en el Firmware
+Es probable que estos malwares sean resultado de [ataques a la cadena de suministro](https://en.wikipedia.org/wiki/Supply_chain_attack), no de la voluntad deliberada de los fabricantes. Pero si el bootloader está bloqueado permanentemente, los investigadores no pueden ni detectarlos ni analizarlos.
 
-En 2025, investigadores de ciberseguridad descubrieron [**Keenadu**](https://www.kaspersky.com/about/press-releases/kaspersky-discovers-keenadu-a-multifaceted-android-malware-that-can-come-preinstalled-on-new-devices) — una puerta trasera preinstalada directamente en el firmware del dispositivo durante la etapa de fabricación. El código malicioso se inyecta en `libandroid_runtime.so` — una biblioteca central del sistema Android — permitiéndole entrar en el espacio de direcciones de *cada* aplicación que se ejecuta en el dispositivo. Su funcionalidad es virtualmente ilimitada, ya que sus módulos maliciosos se descargan dinámicamente y pueden actualizarse remotamente.
+No son amenazas hipotéticas. Son pruebas reales de que el malware a nivel de firmware existe y prospera en entornos bloqueados, donde el usuario no puede auditar lo que se ejecuta en su dispositivo.
 
-Del mismo modo, el troyano [**Triada**](https://www.kaspersky.com/blog/trojan-in-fake-smartphones/53331/) ha evolucionado para incrustar componentes maliciosos directamente en las particiones del sistema, infectando el proceso Zygote — el padre de todas las aplicaciones de Android. Una vez infectado, cada aplicación en el dispositivo se ve comprometida. Los atacantes pueden modificar direcciones de billeteras de criptomonedas, robar credenciales de inicio de sesión, interceptar mensajes y más.
+### El núcleo del problema
 
-Si bien es importante señalar que es poco probable que malware tan notorio sea incrustado intencionalmente por los fabricantes y son más probablemente ejemplos de un [ataque a la cadena de suministro](https://en.wikipedia.org/wiki/Supply_chain_attack), será casi imposible para los investigadores de ciberseguridad detectarlos y analizarlos si el bootloader está bloqueado permanentemente.
+Cuando el sistema está bloqueado y es opaco, el fabricante tiene un poder absoluto. Puede degradar tu dispositivo a distancia, imponer una **obsolescencia programada**. Restringir sus capacidades. Recoger tus datos sin que lo sepas. Y tú no puedes ni verificarlo ni detenerlo.
 
-Estas no son amenazas hipotéticas. Son evidencia del mundo real de que el malware a nivel de firmware existe y prospera en entornos bloqueados donde los usuarios no pueden auditar lo que se ejecuta en sus dispositivos.
+**El bootloader bloqueado no te protege de los atacantes — protege al fabricante de ti.**
 
-### El Problema Central
+## Nuestra propuesta: el Right to Tinker
 
-Cuando el sistema está bloqueado y es opaco, el fabricante tiene un poder absoluto. Pueden degradar tu dispositivo de forma remota y forzar una **obsolescencia programada**. Pueden restringir sus capacidades. Pueden recopilar datos sin tu conocimiento. Y no tienes forma de verificarlo o detenerlo.
+Definimos el **Right to Tinker** (derecho a trastear) así:
 
-**El bootloader bloqueado no te está protegiendo de los atacantes — está protegiendo al fabricante de ti.**
+> **Toda persona que posea legal y plenamente un dispositivo móvil inteligente debe poder desactivar todos los mecanismos de bloqueo activados por defecto y recuperar el control total de su dispositivo.**
 
+Esto implica:
 
-## Nuestra Propuesta: El Derecho a Experimentar (Right to Tinker)
+- **Acceso completo de lectura y escritura** a cada bit del almacenamiento interno destinado a la programación de propósito general.
+- **La capacidad de arrancar cualquier sistema operativo** — ya sea el Android original, un ROM personalizado como LineageOS, o cualquier otro.
 
-Definimos el **Derecho a Experimentar (Right to Tinker)** de la siguiente manera:
+El modelo a seguir es la industria del PC: compras el hardware, eres dueño del hardware, controlas el software que funciona en él.
 
-> **Cualquier persona que posea legal y plenamente un dispositivo móvil inteligente debe ser elegible para desarmar todos los mecanismos de bloqueo habilitados por defecto y restaurar el control total de su dispositivo.**
+### Exigencias adicionales
 
-Esto significa:
+**1. Mecanismo de recuperación obligatorio:**
+Los fabricantes no deben anular la garantía solo porque un usuario ejerza el control total de su dispositivo — a menos que demuestren que un fallo concreto se debe directamente a sus acciones. Además, deben proporcionar herramientas accesibles para restaurar el dispositivo al estado de fábrica.
 
-- **Acceso completo de lectura y escritura** a cada bit en el almacenamiento interno del dispositivo destinado a la programación de propósito general.
-- **La capacidad de iniciar cualquier sistema operativo** — ya sea el Android original, un ROM personalizado como LineageOS, o cualquier otro sistema que el usuario elija.
+**2. Romper el monopolio de la atestación:**
+Las infraestructuras digitales críticas (apps bancarias, mensajería, portales gubernamentales) exigen cada vez más un «entorno de confianza». En la práctica, solo dos empresas estadounidenses proporcionan estas pruebas: Apple y Google (mediante Play Integrity API en Android).
 
-La implementación debería reflejar la industria de las PC: compras el hardware, eres dueño del hardware, controlas el software que se ejecuta en él.
+Esto excluye de facto cualquier dispositivo que no ejecute software propietario de Google. Como dice acertadamente el consorcio Volla, esto crea una «paradoja de seguridad» — «la verificación de confianza la realiza precisamente la entidad cuyo ecosistema se pretende evitar».
 
-### Demandas Adicionales
+Afortunadamente, ya hay alternativas en marcha. El proyecto [**UnifiedAttestation**](https://uattest.net/), liderado por Volla Systeme con Murena, Iodé y Apostrophy, desarrolla bajo licencia Apache 2.0 un sistema de atestación open-source, transparente y descentralizado, que cualquier sistema operativo (incluidos los ROM personalizados) puede implementar. Apoyamos y amplificamos este esfuerzo.
 
-**1. Mecanismo de Recuperación Obligatorio:**
-Los fabricantes no deben anular la garantía únicamente porque un usuario ejerza el control total del dispositivo — a menos que puedan probar que un mal funcionamiento específico es un resultado directo de las operaciones del usuario. Además, los fabricantes deben proporcionar herramientas o servicios accesibles para restaurar un dispositivo a la imagen del sistema de fábrica.
+### Qué conseguiríamos
 
-**2. Rompiendo el Monopolio de la Atestación de Dispositivos:**
-La infraestructura digital crítica — aplicaciones bancarias, servicios de mensajería, portales gubernamentales — requiere cada vez más un "entorno de dispositivo confiable". En la práctica, las únicas pruebas aceptadas son proporcionadas por dos empresas estadounidenses: Apple y Google (a través de Play Integrity API en Android).
+- **Para el usuario medio:** La certeza de que su dispositivo no está siendo degradado o vigilado en secreto, porque el sistema es auditable.
+- **Para el trasteador:** La libertad de personalizar, reparar y alargar la vida de su dispositivo.
+- **Para los investigadores de ciberseguridad:** La capacidad de encontrar vulnerabilidades y exigir responsabilidades a los fabricantes.
+- **Para el medio ambiente:** Dispositivos que duran más gracias a las actualizaciones comunitarias.
+- **Para la soberanía digital:** Menos dependencia de un puñado de gigantes estadounidenses para las infraestructuras esenciales.
 
-Esto crea una exclusión de facto para cualquier dispositivo que no ejecute el software propietario de Google. Como el consorcio Volla lo describe acertadamente, esto lleva a una "paradoja de seguridad" — "la verificación de confiabilidad es realizada precisamente por esa entidad cuyo ecosistema se debe evitar al mismo tiempo".
+## Únete al movimiento
 
-Afortunadamente, ya se está trabajando en ello. El proyecto **UnifiedAttestation**, liderado por Volla Systeme con socios como Murena, Iodé y Apostrophy, está desarrollando una alternativa de código abierto a Play Integrity API bajo la licencia Apache 2.0. Este proyecto tiene como objetivo crear un sistema de atestación transparente y descentralizado que cualquier sistema operativo (incluyendo ROMs personalizados) pueda implementar. Apoyamos y amplificamos este esfuerzo.
+El Right to Tinker no es una preocupación de nicho. Es un derecho digital fundamental que afecta a cada usuario de smartphone. Cuando los fabricantes bloquean nuestros dispositivos, no nos protegen — protegen su capacidad de controlarnos.
 
-### Lo Que Esto Lograría
-
-- **Para el usuario promedio:** La seguridad de que su dispositivo no está siendo degradado o vigilado secretamente, porque el sistema es auditable.
-- **Para el experimentador:** La libertad de personalizar, reparar y extender la vida útil de su dispositivo.
-- **Para los investigadores de ciberseguridad:** La capacidad de encontrar vulnerabilidades y responsabilizar a los fabricantes.
-- **Para el medio ambiente:** Mayor vida útil de los dispositivos a través de actualizaciones de software respaldadas por la comunidad.
-- **Para la soberanía digital:** Reducción de la dependencia de un puñado de corporaciones estadounidenses para la infraestructura central.
-
-
-## Únete al Movimiento
-
-El Derecho a Experimentar no es una preocupación de aficionados de nicho. Es un derecho digital fundamental que afecta a cada usuario de teléfonos inteligentes. Cuando los fabricantes bloquean nuestros dispositivos, no nos están protegiendo — están protegiendo su capacidad de controlarnos.
-
-La comunidad de experimentación siempre ha sido la vanguardia de la libertad digital. Estuvimos allí cuando las PC fueron bloqueadas. Estuvimos allí cuando los routers fueron bloqueados. Estamos aquí ahora, mientras los teléfonos inteligentes — las computadoras más personales que poseemos — están siendo bloqueados más que nunca.
+La comunidad del trasteo siempre ha sido la vanguardia de la libertad digital. Estuvimos allí cuando bloquearon los PC. Estuvimos allí cuando bloquearon los routers. Estamos aquí ahora, mientras los smartphones — los ordenadores más personales que poseemos — están siendo bloqueados como nunca.
 
 **El momento de actuar es ahora.**
 
-Cada día que esperamos, otro fabricante aprieta las tuercas. Se implementa otra política. Se restringe otra función. Se degrada otro dispositivo.
+Cada día que esperamos, otro fabricante aprieta las tuercas. Otra política se implementa. Otra función se restringe. Otro dispositivo se degrada.
 
-Pero lo contrario también es cierto: cada día que actuamos, acumulamos impulso. Ganamos aliados. Hacemos ruido. Nos volvemos más difíciles de ignorar.
+Pero lo contrario también es cierto: cada día que actuamos, ganamos impulso. Encontramos aliados. Hacemos ruido. Nos volvemos más difíciles de ignorar.
 
 ---
 
@@ -149,10 +144,10 @@ Pero lo contrario también es cierto: cada día que actuamos, acumulamos impulso
 - [Reddit `r/right2tinker`](https://www.reddit.com/r/right2tinker)
 - [Megahilo de XDA](https://xdaforums.com)
 
-Y necesitamos tu voz para que el mundo sepa que el Derecho a Experimentar importa — publica en redes sociales con nuestros hashtags `#R2T`, `#Right2Tinker` y `#RightToTinker`.
+Y necesitamos tu voz para que el mundo sepa que el Right to Tinker importa — publica en redes sociales con nuestros hashtags `#R2T`, `#Right2Tinker` y `#RightToTinker`.
 
-**Luchenos por un ecosistema móvil libre, transparente, auditable y confiable.**
+**Luchemos por un ecosistema móvil libre, transparente, auditable y fiable.**
 
 ---
 
-*Este es un documento vivo. A medida que el movimiento crezca, surjan nuevas evidencias y el panorama evolucione, estas demandas y estrategias se refinarán. El objetivo no es producir un documento perfecto — el objetivo es iniciar un movimiento.*
+*Este es un documento vivo. A medida que el movimiento crezca, surjan nuevas pruebas y el panorama evolucione, estas demandas y estrategias se refinarán. El objetivo no es producir un documento perfecto — el objetivo es iniciar un movimiento.*

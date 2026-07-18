@@ -4,8 +4,8 @@ title: Noticias
 lang: es
 ---
 
-## 18 de julio de 2026 — ¡Hola Mundo!
+## 18 de julio de 2026 — ¡Arrancamos!
 
-Acabamos de iniciar la iniciativa. A medida que avance, compartiremos actualizaciones importantes en esta página.
+Acabamos de lanzar la iniciativa. Según avance, compartiremos aquí las novedades importantes.
 
-¡Mantente atento!
+¡Mantente al tanto!

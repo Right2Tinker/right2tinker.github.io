@@ -4,30 +4,36 @@ title: FAQ
 lang: fr
 ---
 
-## Un bootloader déverrouillable dégrade-t-il la sécurité de mon appareil ?
+## Déverrouiller le bootloader, ça rend mon téléphone moins sécurisé ?
 
-**Pas du tout.** Tant que vous n'activez pas intentionnellement l'option de déverrouillage OEM et que vous ne connectez pas votre téléphone à un ordinateur pour le déverrouillage du bootloader (une procédure qui effacera toujours vos données), votre téléphone reste dans l'état verrouillé d'origine, ce qui est totalement sécurisé.
+**Pas du tout.** Tant que tu ne vas pas dans les options développeur pour activer le déverrouillage OEM et que tu ne branches pas ton téléphone à un ordinateur pour déverrouiller le bootloader (une procédure qui efface toutes tes données), ton téléphone reste dans son état verrouillé d'usine — aussi sécurisé que le jour de l'achat.
 
-En fait, un bootloader déverrouillable contribue à votre sécurité et à votre vie privée, car il permet aux chercheurs en cybersécurité d'inspecter le firmware préinstallé pour détecter d'éventuels logiciels malveillants et télémétries non consenties.
+En fait, un bootloader déverrouillable est un *atout* pour ta sécurité : il permet aux chercheurs en cybersécurité d'inspecter le firmware préinstallé pour y débusquer d'éventuels malwares ou mouchards.
 
-## La directive européenne RED (2014/53/UE) impose-t-elle le verrouillage des appareils ?
+## La directive européenne RED (2014/53/UE) impose-t-elle le verrouillage ?
 
-Beaucoup de personnes citent l'article 3(3)(i) de la directive RED comme la raison pour laquelle les OEM doivent verrouiller le bootloader définitivement. Mais c'est **totalement inexact**. L'article stipule :
+Beaucoup de gens citent l'article 3(3)(i) de la directive RED comme justification. Mais c'est **totalement faux**. Voici ce que dit le texte original :
 
-> les équipements radioélectriques prennent en charge certaines fonctionnalités afin de garantir que les logiciels ne peuvent être chargés dans l'équipement radioélectrique que lorsque la conformité de la combinaison de l'équipement radioélectrique et du logiciel a été démontrée.
+> radio equipment supports certain features in order to ensure that software can only be loaded into the radio equipment where the compliance of the combination of the radio equipment and software has been demonstrated.
 
-Dans le contexte d'un appareil mobile intelligent, l'« équipement radioélectrique » fait référence au [processeur de bande de base](https://en.wikipedia.org/wiki/Baseband_processor). Cet article exige en pratique des mesures cryptographiques pour garantir que seul le **firmware de bande de base** authentique signé par le fabricant de la puce puisse être chargé — ce qui est mis en œuvre universellement depuis des années sans dépendre du tout du verrouillage OEM.
+> _Traduction_ : les équipements radioélectriques doivent prendre en charge certaines fonctionnalités garantissant que les logiciels ne peuvent être chargés que lorsque la conformité de la combinaison de l'équipement et du logiciel a été démontrée.
 
-La véritable intention de la directive est de s'assurer que les appareils n'interfèrent pas avec les fréquences d'urgence publiques, les réseaux cellulaires ou les communications aéronautiques.
+Le terme « équipement radioélectrique » désigne ici le [processeur de bande de base](https://en.wikipedia.org/wiki/Baseband_processor) (le modem), pas le smartphone dans son ensemble. Cet article exige que le firmware de la partie radio soit signé cryptographiquement — une mesure universellement appliquée depuis des années, qui n'a rien à voir avec le verrouillage OEM ni avec la capacité de l'utilisateur à flasher un OS.
 
-En fait, les régulateurs européens ont explicitement prévu que des fabricants cupides pourraient essayer d'utiliser cette directive comme une arme pour verrouiller leurs appareils et tuer la concurrence. Pour éviter cela, ils ont inscrit le considérant 19 directement dans la directive :
+Le vrai but de cette directive, c'est d'éviter que les appareils n'interfèrent avec les fréquences d'urgence, les réseaux mobiles ou les communications aéronautiques. Pas d'empêcher les utilisateurs d'installer l'OS de leur choix.
 
-> La vérification par l'équipement radioélectrique de la conformité de sa combinaison avec un logiciel ne devrait pas être détournée pour empêcher son utilisation avec des logiciels fournis par des tiers indépendants. La mise à disposition des autorités publiques, des fabricants et des utilisateurs d'informations sur la conformité des combinaisons prévues d'équipements radioélectriques et de logiciels devrait contribuer à faciliter la concurrence. Afin d'atteindre ces objectifs, le pouvoir d'adopter des actes conformément à l'article 290 du TFUE devrait être délégué à la Commission en ce qui concerne la spécification des catégories ou classes d'équipements radioélectriques pour lesquels les fabricants doivent fournir des informations sur la conformité des combinaisons prévues d'équipements radioélectriques et de logiciels avec les exigences essentielles énoncées dans la présente directive.
+D'ailleurs, les régulateurs européens avaient anticipé que des fabricants utiliseraient cette directive comme prétexte pour verrouiller leurs appareils et étouffer la concurrence. C'est pourquoi ils ont ajouté le considérant 19 :
 
-## Certaines réglementations chinoises imposent-elles le verrouillage ?
+> Verification by radio equipment of the compliance of its combination with software should not be abused in order to prevent its use with software provided by independent parties. The availability to public authorities, manufacturers and users of information on the compliance of intended combinations of radio equipment and software should contribute to facilitate competition. In order to achieve those objectives, the power to adopt acts in accordance with Article 290 TFEU should be delegated to the Commission in respect of the specification of categories or classes of radio equipment for which manufacturers have to provide information on the compliance of intended combinations of radio equipment and software with the essential requirements set out in this Directive.
 
-Il n'existe actuellement aucune loi ou réglementation chinoise qui impose un bootloader définitivement verrouillé. Bien que certaines personnes aient fait référence à [cette réglementation](https://www.gov.cn/zhengce/zhengceku/2022-12/15/content_5732079.htm) comme étant la raison du verrouillage du bootloader de Xiaomi, cette affirmation est probablement fausse.
+> _Traduction_ : la vérification par l'équipement radioélectrique de la conformité de sa combinaison avec un logiciel ne doit pas être détournée pour empêcher son utilisation avec des logiciels fournis par des tiers indépendants. La mise à disposition des autorités publiques, des fabricants et des utilisateurs d'informations sur la conformité des combinaisons prévues d'équipements radioélectriques et de logiciels doit contribuer à faciliter la concurrence.
 
-Bien que cette réglementation exige des « mesures techniques pour prévenir les attaques sur la chaîne d'approvisionnement », elle n'exige pas que les appareils soient définitivement verrouillés après avoir atteint les mains de l'utilisateur final. De plus, OnePlus vend toujours des appareils en Chine avec un bootloader déverrouillable, ce qui infirme l'existence d'une quelconque loi ou réglementation de ce type.
+En clair : la directive RED ne peut pas être utilisée pour t'empêcher d'installer un autre système.
 
-Les fabricants ne sont donc pas obligés de verrouiller votre appareil. Ils choisissent de le faire pour leur propre bénéfice.
+## Et la réglementation chinoise, elle impose le verrouillage ?
+
+**Non.** Il n'existe aucune loi ou réglementation chinoise qui exige le verrouillage permanent du bootloader. Certains citent [ce texte de 2022](https://www.gov.cn/zhengce/zhengceku/2022-12/15/content_5732079.htm) du ministère de l'Industrie et des Technologies de l'information, mais c'est une interprétation abusive. Ce texte parle de mesures techniques pour prévenir les attaques sur la chaîne d'approvisionnement — il n'a rien à voir avec le fait de verrouiller les appareils une fois qu'ils sont entre les mains des consommateurs.
+
+Si une telle loi existait, OnePlus ne pourrait pas vendre en Chine des appareils au bootloader déverrouillable. Or, c'est le cas.
+
+Les fabricants ne sont donc pas forcés de verrouiller vos appareils. Ils le font parce que ça les arrange.

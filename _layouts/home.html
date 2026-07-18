@@ -2,21 +2,57 @@
 layout: default
 ---
 
+{% assign t_slogan = 'A movement for transparency, accountability, and true ownership of our devices.' %}
+{% assign t_proposal_title = 'The Right to Tinker' %}
+{% assign t_proposal_text = 'Anyone who lawfully and fully possesses a smart mobile device must be eligible to disarm all enabled-by-default lockdown mechanisms and restore full control of their device.' %}
+{% assign t_social_instruction = 'Support the initiative and connect with our community:' %}
+{% assign t_tag_instruction = 'Support us by posting on social media with these tags:' %}
+
+{% if page.lang == 'chs' %}
+  {% assign t_slogan = '一个追求透明度、可问责性和设备真正所有权的运动。' %}
+  {% assign t_proposal_title = 'Right to Tinker（修改权）' %}
+  {% assign t_proposal_text = '智能设备的合法所有者，应有资格解除所有默认启用的保护或限制机制，恢复对其设备的完全控制。' %}
+  {% assign t_social_instruction = '支持倡议并加入我们的社区：' %}
+  {% assign t_tag_instruction = '在社交媒体上使用以下标签发帖支持我们：' %}
+{% elsif page.lang == 'cht' %}
+  {% assign t_slogan = '一個追求透明度、可問責性和裝置真正所有權的運動。' %}
+  {% assign t_proposal_title = 'Right to Tinker（修改權）' %}
+  {% assign t_proposal_text = '智慧型裝置的合法所有者，應有資格解除所有預設啟用的保護或限制機制，恢復對其裝置的完全控制。' %}
+  {% assign t_social_instruction = '支持倡議並加入我們的社群：' %}
+  {% assign t_tag_instruction = '在社交媒體上使用以下標籤發文支持我們：' %}
+{% elsif page.lang == 'ja' %}
+  {% assign t_slogan = '透明性、説明責任、そして真のデバイス所有権を求めるムーブメント。' %}
+  {% assign t_proposal_title = 'Right to Tinker（いじる権利）' %}
+  {% assign t_proposal_text = 'スマートモバイル端末の合法的な所有者は、デフォルトで有効化されているすべてのロックダウン機構を無効化し、端末の完全な制御を回復する資格を有する。' %}
+  {% assign t_social_instruction = 'この取り組みを支援し、コミュニティに参加する：' %}
+  {% assign t_tag_instruction = 'ソーシャルメディアで以下のタグを付けて投稿し、私たちを支援してください：' %}
+{% elsif page.lang == 'fr' %}
+  {% assign t_slogan = 'Un mouvement pour la transparence, la responsabilité et la véritable propriété de nos appareils.' %}
+  {% assign t_proposal_title = 'Right to Tinker（le droit de bidouiller）' %}
+  {% assign t_proposal_text = 'Toute personne qui possède légalement et pleinement un appareil mobile intelligent doit être en mesure de désactiver tous les mécanismes de verrouillage activés par défaut et de retrouver le contrôle total de son appareil.' %}
+  {% assign t_social_instruction = "Soutenez l'initiative et rejoignez notre communauté :" %}
+  {% assign t_tag_instruction = "Soutenez-nous en publiant sur les réseaux sociaux avec ces hashtags :" %}
+{% elsif page.lang == 'es' %}
+  {% assign t_slogan = 'Un movimiento por la transparencia, la rendición de cuentas y la verdadera propiedad de nuestros dispositivos.' %}
+  {% assign t_proposal_title = 'Right to Tinker（el derecho a trastear）' %}
+  {% assign t_proposal_text = 'Toda persona que posea legal y plenamente un dispositivo móvil inteligente debe poder desactivar todos los mecanismos de bloqueo activados por defecto y recuperar el control total de su dispositivo.' %}
+  {% assign t_social_instruction = 'Apoya la iniciativa y conéctate con nuestra comunidad:' %}
+  {% assign t_tag_instruction = 'Apóyanos publicando en redes sociales con estas etiquetas:' %}
+{% endif %}
+
 <section class="project-section">
   <!-- Identity -->
-  <h1 class="project-slogan">A movement for transparency, accountability, and true ownership of our devices.</h1>
-  
+  <h1 class="project-slogan">{{ t_slogan }}</h1>
+
   <!-- Core Proposal -->
   <div class="project-proposal">
-    <h2 class="proposal-title">The Right to Tinker</h2>
-    <p>
-      Anyone who lawfully and fully possesses a smart mobile device must be eligible to disarm all enabled-by-default lockdown mechanisms and restore full control of their device.
-    </p>
+    <h2 class="proposal-title">{{ t_proposal_title }}</h2>
+    <p>{{ t_proposal_text }}</p>
   </div>
 
   <!-- Social Action -->
   <div class="project-social-action">
-    <p class="social-instruction">Support the initiative and connect with our community:</p>
+    <p class="social-instruction">{{ t_social_instruction }}</p>
     <div class="project-social-grid">
       <a href="https://github.com/Right2Tinker/right2tinker.github.io" class="social-pill github" target="_blank">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -44,7 +80,7 @@ layout: default
       </a>
     </div>
 
-    <p class="tag-instruction">Support us by posting on social media with these tags:</p>
+    <p class="tag-instruction">{{ t_tag_instruction }}</p>
     <div class="project-tags">
       <span>#R2T</span>
       <span>#Right2Tinker</span>

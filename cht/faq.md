@@ -1,33 +1,39 @@
 ---
 layout: default
-title: 常見問題
+title: FAQ
 lang: cht
 ---
 
-## 可解鎖的引導程式會降低我裝置的安全性嗎？
+## 能解鎖BL的話，手機的安全性會降低嗎？
 
-**完全不會。** 只要你沒有故意開啟 OEM 解鎖選項並將手機連接到電腦進行引導程式解鎖（這個程序總是會清除你的資料），你的手機就會保持在原始的鎖定狀態，這是完全安全的。
+**完全不會。** 你不去主動解BL（進fastboot點一下解鎖、或者執行一下廠商的官方解鎖工具，過程中資料會被清空），手機就永遠處於出廠預設的鎖定狀態，該多安全就多安全。
 
-事實上，可解鎖的引導程式有助於你的安全和隱私，因為它允許網路安全研究人員檢查預先安裝的韌體中是否存在潛在的惡意軟體和未經同意的遙測。
+甚至可以說，能解鎖反而對你的隱私有好處——只有能解BL，安全研究人員才有機會檢查廠商到底在韌體裡藏了什麼東西。
 
-## EU RED 指令 (2014/53/EU) 是否要求裝置必須鎖定？
+## 歐盟RED法案是不是強制要求手機鎖死BL？
 
-很多人引用 RED 指令的第 3(3)(i) 條，認為這是 OEM 必須永久鎖定引導程式的原因。但這是**完全不準確的**。該條文規定：
+很多人拿這個說事，但RED第3(3)(i)條的原文是：
 
-> 無線電設備支援某些功能，以確保只有在無線電設備與軟體的組合符合性得到證明時，軟體才能被加載到無線電設備中。
+> radio equipment supports certain features in order to ensure that software can only be loaded into the radio equipment where the compliance of the combination of the radio equipment and software has been demonstrated.
 
-在智慧型行動裝置的背景下，「無線電設備」指的是[基頻處理器](https://en.wikipedia.org/wiki/Baseband_processor)。該條文實際上是要求採用加密測量方法，確保只能加載由晶片製造商簽名的真實**基頻韌體**——這已經在不依賴 OEM 鎖的情況下普遍實施多年了。
+> _翻譯_：無線電設備應確保只有經過合規性驗證的軟體組合才能被載入。
 
-該指令的真正目的是確保裝置不會干擾公共緊急頻率、蜂窩網路或航空通訊。
+注意，「無線電設備」（radio equipment）在這裡指的是[手機基帶](https://en.wikipedia.org/wiki/Baseband_processor)，不是整支手機。這條規定的實際意思是基帶韌體得有簽名驗證以確保未經授權的韌體不會被載入到基帶裡——這跟使用者能不能刷系統半毛錢關係都沒有，而且基帶簽名驗證早就在用了，根本不需要靠BL鎖來實現。
 
-事實上，歐盟監管機構明確預見到，貪婪的製造商可能試圖利用這項指令作為鎖定裝置和扼殺競爭的武器。為了防止這種情況，他們將第 19 條序言直接寫入了指令：
+RED的真正目的是防止手機干擾應急通訊頻率和民航通訊，不是幫你廠商鎖消費者。
 
-> 無線電設備對其與軟體組合的符合性驗證不應被濫用，以阻止其與獨立第三方提供的軟體一起使用。向公共當局、製造商和使用者提供有關無線電設備與軟體預期組合符合性的資訊，應有助於促進競爭。為實現這些目標，應根據 TFEU 第 290 條將通過法案的權力授予委員會，以明確要求製造商提供有關無線電設備與軟體預期組合符合本指令所規定的基本要求資訊的無線電設備類別或分類。
+實際上歐盟也預料到了廠商會拿RED當幌子，所以在指令裡專門寫了Recital 19：
 
-## 是否有某些中國法規要求鎖定？
+> Verification by radio equipment of the compliance of its combination with software should not be abused in order to prevent its use with software provided by independent parties. The availability to public authorities, manufacturers and users of information on the compliance of intended combinations of radio equipment and software should contribute to facilitate competition. In order to achieve those objectives, the power to adopt acts in accordance with Article 290 TFEU should be delegated to the Commission in respect of the specification of categories or classes of radio equipment for which manufacturers have to provide information on the compliance of intended combinations of radio equipment and software with the essential requirements set out in this Directive.
 
-目前沒有任何現有的中國法律或法規要求永久鎖定引導程式。雖然有人將[這項法規](https://www.gov.cn/zhengce/zhengceku/2022-12/15/content_5732079.htm)視為 Xiaomi 引導程式鎖定的原因，但這種說法很可能是錯誤的。
+> _翻譯_：不得濫用對無線電設備與其軟體組合符合性進行的驗證，以防阻礙其與獨立第三方提供的軟體配合使用。向公共主管機關、製造商和使用者提供關於無線電設備與軟體預期組合符合性的資訊，應有助於促進競爭。為實現上述目標，應根據《歐盟運行條約》（TFEU）第290條，授權歐盟委員會通過相關法案，具體規定哪些類別或種類的無線電設備要求製造商提供資訊，以證明其無線電設備與軟體的預期組合符合本指令規定的基本要求。
 
-雖然該法規要求「採取技術措施防止供應鏈攻擊」，但它並不要求在裝置到達最終使用者手中後永久鎖定。此外，OnePlus 仍在中國銷售具有可解鎖引導程式的裝置，這證明了不存在任何此類法律或法規。
+用人話講就是：你不能用RED來阻止使用者裝別家的系統。
 
-所以製造商並非被迫鎖定你的裝置。他們是為了自身利益而選擇這樣做。
+## 那中國有法律法規強制要求BL鎖死嗎？
+
+**沒有。** 網上確實有人拿[工信部2022年這個文件](https://www.gov.cn/zhengce/zhengceku/2022-12/15/content_5732079.htm)來說事，但這是過度解讀。該文件說的是在供應鏈環節防止被植入後門，既沒有也管不到消費者買到手機之後自己要解鎖的行為。
+
+如果真有這種規定，一加在中國賣的手機怎麼可以解BL？
+
+所以，廠商鎖BL不是什麼法律法規逼的。他們選擇鎖死，純粹是為了自己的利益。

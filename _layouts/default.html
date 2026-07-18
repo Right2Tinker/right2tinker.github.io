@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+{% assign lang_attr = page.lang | default: 'en' %}
+<html lang="{{ lang_attr }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | The Right to Tinker Initiative</title>
-  
+
+  {% assign t_suffix = 'The Right to Tinker Initiative' %}
+  {% assign t_brand = 'The Right to Tinker Initiative' %}
+  {% assign t_faq = 'FAQ' %}
+  {% assign t_news = 'News' %}
+
+  {% if page.lang == 'chs' %}
+    {% assign t_suffix = 'Right to Tinker 倡议' %}
+    {% assign t_brand = 'Right to Tinker 倡议' %}
+    {% assign t_faq = '常见问题' %}
+    {% assign t_news = '最新消息' %}
+  {% elsif page.lang == 'cht' %}
+    {% assign t_suffix = 'Right to Tinker 倡議' %}
+    {% assign t_brand = 'Right to Tinker 倡議' %}
+    {% assign t_faq = '常見問題' %}
+    {% assign t_news = '最新消息' %}
+  {% elsif page.lang == 'ja' %}
+    {% assign t_suffix = 'Right to Tinker 構想' %}
+    {% assign t_brand = 'Right to Tinker 構想' %}
+    {% assign t_faq = 'FAQ' %}
+    {% assign t_news = 'お知らせ' %}
+  {% elsif page.lang == 'fr' %}
+    {% assign t_suffix = 'Initiative Right to Tinker' %}
+    {% assign t_brand = 'Initiative Right to Tinker' %}
+    {% assign t_faq = 'FAQ' %}
+    {% assign t_news = 'Actualités' %}
+  {% elsif page.lang == 'es' %}
+    {% assign t_suffix = 'Iniciativa Right to Tinker' %}
+    {% assign t_brand = 'Iniciativa Right to Tinker' %}
+    {% assign t_faq = 'FAQ' %}
+    {% assign t_news = 'Noticias' %}
+  {% endif %}
+
+  {% if page.lang and page.lang != 'en' %}
+    {% assign home_url = '/' | append: page.lang | append: '/' %}
+    {% assign faq_url = '/' | append: page.lang | append: '/faq' %}
+    {% assign news_url = '/' | append: page.lang | append: '/news' %}
+  {% else %}
+    {% assign home_url = '/' %}
+    {% assign faq_url = '/faq' %}
+    {% assign news_url = '/news' %}
+  {% endif %}
+
+  <title>{{ page.title }} | {{ t_suffix }}</title>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -13,11 +57,11 @@
 
   <header class="top-bar">
     <div class="top-bar-container">
-      
+
       <!-- Local Logo and Site Name -->
-      <a href="{{ '/' | relative_url }}" class="brand">
+      <a href="{{ home_url | relative_url }}" class="brand">
         <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="Project Logo" class="brand-logo">
-        <span class="brand-text">The Right to Tinker Initiative</span>
+        <span class="brand-text">{{ t_brand }}</span>
       </a>
 
       <!-- Mobile Menu Toggle Button -->
@@ -29,12 +73,12 @@
 
       <!-- Right Side: Nav, Language, Socials -->
       <div class="nav-container" id="nav-container">
-        
+
         <nav class="nav-links">
-          <a href="{{ '/faq' | relative_url }}">FAQ</a>
-          <a href="{{ '/news' | relative_url }}">News</a>
+          <a href="{{ faq_url | relative_url }}">{{ t_faq }}</a>
+          <a href="{{ news_url | relative_url }}">{{ t_news }}</a>
         </nav>
-        
+
         <!-- Modern Language Switcher -->
         <div class="lang-dropdown" id="lang-dropdown">
           <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
