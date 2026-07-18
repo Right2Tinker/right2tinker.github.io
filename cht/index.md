@@ -109,7 +109,7 @@ lang: cht
 - [Discord群組](https://discord.gg/pbKDpjuCx6)
 - [Telegram群組](https://t.me/right2tinker)
 - [Reddit `r/right2tinker`](https://www.reddit.com/r/right2tinker)
-- [XDA總帖](https://xdaforums.com)
+- [XDA總帖](https://xdaforums.com/t/the-right-to-tinker-initiative-its-time-to-take-back-the-full-control-of-our-devices.4795402/)
 
 若您使用X、TikTok、Instagram等社交平台，可以透過帶`#R2T`、`#Right2Tinker`和`#RightToTinker`標籤發文以支持我們。
 

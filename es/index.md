@@ -142,7 +142,7 @@ Pero lo contrario también es cierto: cada día que actuamos, ganamos impulso. E
 - [Servidor de Discord](https://discord.gg/pbKDpjuCx6)
 - [Grupo de Telegram](https://t.me/right2tinker)
 - [Reddit `r/right2tinker`](https://www.reddit.com/r/right2tinker)
-- [Megahilo de XDA](https://xdaforums.com)
+- [Megahilo de XDA](https://xdaforums.com/t/the-right-to-tinker-initiative-its-time-to-take-back-the-full-control-of-our-devices.4795402/)
 
 Y necesitamos tu voz para que el mundo sepa que el Right to Tinker importa — publica en redes sociales con nuestros hashtags `#R2T`, `#Right2Tinker` y `#RightToTinker`.
 

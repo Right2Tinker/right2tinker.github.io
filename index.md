@@ -146,7 +146,7 @@ But the opposite is also true: every day we act, we build momentum. We gain alli
 - [Discord server](https://discord.gg/pbKDpjuCx6)
 - [Telegram group](https://t.me/right2tinker)
 - [Reddit `r/right2tinker`](https://www.reddit.com/r/right2tinker)
-- [XDA megathread](https://xdaforums.com)
+- [XDA megathread](https://xdaforums.com/t/the-right-to-tinker-initiative-its-time-to-take-back-the-full-control-of-our-devices.4795402/)
 
 And we need your voice to let the world know that the Right to Tinker matters — post on social media with our hashtags `#R2T`, `#Right2Tinker` and `#RightToTinker`.
 
