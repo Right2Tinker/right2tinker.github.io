@@ -2,6 +2,8 @@
 
 An initiative to reclaim the true ownership and the freedom to tinker of our smart digital devices.
 
+Please visit our [website](https://right2tinker.org) for a complete and multilingual version of this document.
+
 ## The Problem: Your Phone Is No Longer Yours
 
 You may already know that Apple’s mobile ecosystem is heavily locked down — you can only install apps from the App Store, and you can only run iOS on your device. Android was once different. It was loved by those who wanted to truly *own* their devices, thanks to its openness and the freedom to tinker.
