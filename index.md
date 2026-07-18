@@ -17,7 +17,7 @@ But this also means that users who *want* to modify their own phones are blocked
 
 Historically, manufacturers provided official ways for users to **unlock** their devices — at their own risk — so they could regain full control. But in recent years, one manufacturer after another has quietly removed these options. Today, most devices on the market are locked down forever.
 
-In 2025, the situation worsened significantly. Samsung removed the OEM Unlocking toggle from Developer Options in One UI 8. Xiaomi decommissioned its legacy unlock servers and limited users to unlocking just one device per year. Even worse, Google has planned to restrict the freedom to install apps from outside the Play Store entirely. Only a strong public protest — the [**Keep Android Open**](https://keepandroidopen.org/) movement — pushed back against these plans.
+In 2025, the situation worsened significantly. Samsung removed the OEM Unlocking toggle from Developer Options in One UI 8. Xiaomi has also made OEM-unlocking practically impossible. Even worse, Google has planned to heavily restrict the freedom to sideload third apps. Only a strong public protest — the [**Keep Android Open**](https://keepandroidopen.org/) movement — pushed back against these plans.
 
 The timeline of these lockdown events, as well as the current state of the freedom to tinker in the Android world, are well documented by the [**Bootloader Unlock Wall of Shame**](https://github.com/zenfyrdev/bootloader-unlock-wall-of-shame) project.
 
@@ -115,7 +115,7 @@ Critical digital infrastructure — banking apps, messaging services, government
 
 This creates a de facto exclusion for any device not running Google’s proprietary software. As the Volla consortium aptly describes it, this leads to a “security paradox” — “the check of trustworthiness is carried out by precisely that entity whose ecosystem is to be avoided at the same time”.
 
-Encouragingly, work is already underway. The **UnifiedAttestation** project, led by Volla Systeme with partners including Murena, Iodé, and Apostrophy, is developing an open-source alternative to Play Integrity API under the Apache 2.0 license. This project aims to create a transparent, decentralized attestation system that any operating system (including custom ROMs) can implement. We support and amplify this effort.
+Encouragingly, work is already underway. The [**UnifiedAttestation**](https://uattest.net/) project, led by Volla Systeme with partners including Murena, Iodé, and Apostrophy, is developing an open-source alternative to Play Integrity API under the Apache 2.0 license. This project aims to create a transparent, decentralized attestation system that any operating system (including custom ROMs) can implement. We support and amplify this effort.
 
 ### What This Would Achieve
 
