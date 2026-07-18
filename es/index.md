@@ -57,7 +57,7 @@ Pero esto requiere **acceso físico** al dispositivo, saltarse las pruebas de pr
 
 ### «Reduce los costes de soporte. »
 
-La comunidad de trasteo es ínfima. Los fabricantes ya tienen el derecho legal de anular la garantía al desbloquear. Esta excusa es una cortina de humo.
+La comunidad de trasteo es ínfima. Esta excusa es una cortina de humo.
 
 ## Lo que realmente está pasando
 

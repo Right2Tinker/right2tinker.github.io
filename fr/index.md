@@ -57,7 +57,7 @@ Mais ça nécessite un **accès physique** à l'appareil, de contourner les preu
 
 ### « Ça réduit les coûts de support. »
 
-La communauté des bidouilleurs est minuscule. Les fabricants ont déjà le droit d'annuler la garantie après un déverrouillage. Cet argument est un écran de fumée.
+La communauté des bidouilleurs est minuscule. Cet argument est un écran de fumée.
 
 ## Ce qui se passe vraiment
 
