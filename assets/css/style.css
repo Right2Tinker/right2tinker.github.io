@@ -1,0 +1,357 @@
+/* ================= CSS VARIABLES ================= */
+:root {
+  /* Light Theme */
+  --bg-color: #ffffff;
+  --text-color: #24292f;
+  --text-muted: #57606a;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-border: #d0d7de;
+  --brand-color: #0969da;
+  --nav-link-color: #24292f;
+  --nav-link-hover: #0969da;
+  
+  /* Project Section */
+  --project-bg: #f8fafc;
+  --project-border: #e2e8f0;
+  --project-shadow: rgba(0, 0, 0, 0.06);
+  --pill-bg: #ffffff;
+  --pill-border: #d0d7de;
+  --pill-hover: #f3f4f6;
+  
+  /* Markdown Specific */
+  --md-border: #d0d7de;
+  --md-code-bg: #f6f8fa;
+  --md-quote-border: #d0d7de;
+  --md-quote-text: #57606a;
+  --md-table-stripe: #f6f8fa;
+  --dropdown-bg: #ffffff;
+  --dropdown-hover: #f3f4f6;
+  --social-hover: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Theme */
+    --bg-color: #0d1117;
+    --text-color: #c9d1d9;
+    --text-muted: #8b949e;
+    --header-bg: rgba(13, 17, 23, 0.85);
+    --header-border: #30363d;
+    --brand-color: #58a6ff;
+    --nav-link-color: #c9d1d9;
+    --nav-link-hover: #58a6ff;
+
+    /* Project Section */
+    --project-bg: #161b22;
+    --project-border: #30363d;
+    --project-shadow: rgba(0, 0, 0, 0.3);
+    --pill-bg: #21262d;
+    --pill-border: #30363d;
+    --pill-hover: #30363d;
+
+    /* Markdown Specific */
+    --md-border: #21262d;
+    --md-code-bg: #161b22;
+    --md-quote-border: #30363d;
+    --md-quote-text: #8b949e;
+    --md-table-stripe: #161b22;
+    --dropdown-bg: #161b22;
+    --dropdown-hover: #21262d;
+    --social-hover: #58a6ff;
+  }
+}
+
+/* ================= GLOBAL STYLES ================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 70px;
+}
+a { text-decoration: none; }
+
+/* ================= HEADER ================= */
+.top-bar {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 60px;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--header-border);
+  z-index: 1000; display: flex; align-items: center;
+}
+.top-bar-container {
+  width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--text-color); font-weight: 700; font-size: 1.1rem;
+}
+.brand-logo { width: 26px; height: 26px; object-fit: contain; }
+
+.nav-container { display: flex; align-items: center; gap: 24px; }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a {
+  color: var(--nav-link-color); font-weight: 500; font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--nav-link-hover); }
+
+/* ================= MODERN LANG DROPDOWN ================= */
+.lang-dropdown { position: relative; }
+.lang-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: none; border: none; color: var(--text-color);
+  font-family: inherit; font-size: 0.95rem; font-weight: 500;
+  cursor: pointer; padding: 6px 8px; border-radius: 6px;
+  transition: background 0.2s;
+}
+.lang-btn:hover { background-color: var(--dropdown-hover); }
+.lang-btn .chevron { transition: transform 0.2s; }
+.lang-btn[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+
+.lang-menu {
+  position: absolute; top: 100%; right: 0; margin-top: 8px;
+  background-color: var(--dropdown-bg);
+  border: 1px solid var(--header-border); border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  list-style: none; min-width: 160px;
+  opacity: 0; visibility: hidden; transform: translateY(-5px);
+  transition: all 0.2s ease;
+}
+.lang-dropdown.open .lang-menu {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.lang-menu li { margin: 4px; }
+.lang-menu button {
+  width: 100%; text-align: left; background: none; border: none;
+  padding: 8px 12px; color: var(--text-color); font-family: inherit;
+  font-size: 0.9rem; cursor: pointer; border-radius: 4px;
+}
+.lang-menu button:hover { background-color: var(--dropdown-hover); }
+
+/* ================= SOCIAL LINKS (TOP BAR) ================= */
+.social-links {
+  display: flex; align-items: center; gap: 14px;
+  padding-left: 14px; border-left: 1px solid var(--header-border);
+}
+.social-links a { color: var(--text-muted); transition: color 0.2s; display: flex; }
+.social-links a:hover { color: var(--social-hover); }
+
+.mobile-toggle { display: none; background: none; border: none; color: var(--text-color); cursor: pointer; }
+
+/* ================= MOBILE UI ================= */
+@media (max-width: 768px) {
+  .mobile-toggle { display: block; }
+  .nav-container {
+    display: none; position: absolute; top: 60px; left: 0; width: 100%;
+    background-color: var(--header-bg); border-bottom: 1px solid var(--header-border);
+    flex-direction: column; padding: 20px; gap: 20px;
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  .nav-container.active { display: flex; }
+  .nav-links { flex-direction: column; align-items: center; width: 100%; }
+  
+  .social-links {
+    width: 100%; justify-content: center;
+    padding: 20px 0 0 0; margin-top: 10px;
+    border-left: none; border-top: 1px solid var(--header-border);
+  }
+  .lang-menu { right: 50%; transform: translateX(50%) translateY(-5px); }
+  .lang-dropdown.open .lang-menu { transform: translateX(50%) translateY(0); }
+}
+
+/* ================= CLEAN MARKDOWN THEME ================= */
+.content-wrapper { max-width: 840px; margin: 0 auto; padding: 40px 20px; }
+
+.markdown-body {
+  font-size: 1.15rem; /* Increased to match definition box */
+  font-weight: 500;   /* Medium weight to match definition box */
+  line-height: 1.7;   /* Taller line height */
+  word-wrap: break-word;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, 
+.markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25;
+}
+.markdown-body h1 { font-size: 2em; border-bottom: 1px solid var(--md-border); padding-bottom: 0.3em; }
+.markdown-body h2 { font-size: 1.5em; border-bottom: 1px solid var(--md-border); padding-bottom: 0.3em; }
+.markdown-body h3 { font-size: 1.25em; }
+
+.markdown-body p, .markdown-body blockquote, .markdown-body ul, 
+.markdown-body ol, .markdown-body dl, .markdown-body table, 
+.markdown-body pre, .markdown-body details {
+  margin-top: 0; margin-bottom: 16px;
+}
+.markdown-body a { color: var(--brand-color); text-decoration: none; }
+.markdown-body a:hover { text-decoration: underline; }
+
+.markdown-body ul, .markdown-body ol { padding-left: 2em; }
+.markdown-body blockquote {
+  padding: 0 1em; color: var(--md-quote-text);
+  border-left: 0.25em solid var(--md-quote-border);
+}
+
+.markdown-body code {
+  padding: 0.2em 0.4em; margin: 0; font-size: 85%;
+  background-color: var(--md-code-bg); border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+.markdown-body pre {
+  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45;
+  background-color: var(--md-code-bg); border-radius: 6px;
+}
+.markdown-body pre code {
+  padding: 0; margin: 0; font-size: 100%; background: transparent; border: 0;
+}
+
+.markdown-body table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+.markdown-body table th, .markdown-body table td {
+  padding: 6px 13px; border: 1px solid var(--md-border);
+}
+.markdown-body table tr { background-color: var(--bg-color); border-top: 1px solid var(--md-border); }
+.markdown-body table tr:nth-child(2n) { background-color: var(--md-table-stripe); }
+
+/* ================= PROJECT SECTION (Main Page Header) ================= */
+.project-section {
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid var(--md-border);
+}
+
+/* 1 & 2: Slogan Centered, Modern Font, Colorful */
+.markdown-body h1.project-slogan {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-bottom: none;
+  padding-bottom: 0;
+  
+  /* Expressive Gradient Text */
+  background: linear-gradient(135deg, #0969da, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+@media (prefers-color-scheme: dark) {
+  .markdown-body h1.project-slogan {
+    background: linear-gradient(135deg, #58a6ff, #b377f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* 3: Right to Tinker Stylized Box */
+.project-proposal {
+  background-color: var(--project-bg);
+  border: 1px solid var(--project-border);
+  border-left: 6px solid var(--brand-color);
+  padding: 32px;
+  border-radius: 12px;
+  margin: 30px 0;
+  box-shadow: 0 10px 30px var(--project-shadow);
+}
+
+.markdown-body .project-proposal h2.proposal-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  border-bottom: none;
+  font-size: 1.4em;
+  color: var(--brand-color);
+}
+
+.project-proposal p {
+  font-size: 1.15em;
+  margin-bottom: 0 !important;
+  font-weight: 500;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* 4: Colored Social Media Pills */
+.social-instruction {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 20px !important;
+}
+
+.project-social-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.social-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--pill-bg);
+  color: var(--text-color) !important;
+  border: 1px solid var(--pill-border);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+  box-shadow: 0 2px 4px var(--project-shadow);
+}
+
+.social-pill:hover {
+  background-color: var(--pill-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--project-shadow);
+}
+
+/* Hardcoded Base Brand Colors for SVG Icons */
+.social-pill.github svg { fill: #181717; }
+.social-pill.telegram svg { fill: #26A5E4; }
+.social-pill.discord svg { fill: #5865F2; }
+.social-pill.xda svg { fill: #F5A900; }
+.social-pill.reddit svg { fill: #FF4500; }
+.social-pill.x-social svg { fill: #000000; }
+
+@media (prefers-color-scheme: dark) {
+  .social-pill.github svg, .social-pill.x-social svg { fill: #ffffff; }
+}
+
+/* 5: Centered, Monospace, Colored Tags */
+.tag-instruction {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 30px !important;
+  margin-bottom: 16px !important;
+}
+
+.project-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.project-tags span {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  background-color: var(--md-code-bg);
+  color: var(--brand-color);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--md-border);
+  font-size: 1.15rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px var(--project-shadow);
+}
