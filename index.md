@@ -11,7 +11,7 @@ You may already know that Apple’s mobile ecosystem is heavily locked down — 
 
 But that era is ending.
 
-To understand what has happened, we first need to explain the [**OEM lock**](https://source.android.com/docs/core/architecture/bootloader/locking_unlocking) (or "bootloader lock") — a critical security component on Android phones. When a device is locked, it prevents anyone from altering the preinstalled operating system. This protects users from malware. All modern Android phones are shipped in this locked state.
+To understand what has happened, we first need to explain the [**OEM lock**](https://source.android.com/docs/core/architecture/bootloader/locking_unlocking) (or “bootloader lock”) — a critical security component on Android phones. When a device is locked, it prevents anyone from altering the preinstalled operating system. This protects users from malware. All modern Android phones are shipped in this locked state.
 
 But this also means that users who *want* to modify their own phones are blocked by this very mechanism.
 
@@ -48,7 +48,7 @@ OEMs, as well as some Android development community members, often point to seve
 
 Manufacturers often explain that a locked down bootloader allows them to implement anti-theft mechanisms that cannot be easily cracked.
 
-But bootloaders are already **locked by default**, and without it being unlocked already, an anti-theft mechanism can easily **block a theft from unlocking the bootloader** altogether. Futhermore, even with current lockdowns, stolen devices can still be disassembled and sold for parts. This argument does not hold.
+But bootloaders are already **locked by default**, and without it being unlocked already, an anti-theft mechanism can easily **block a theft from unlocking the bootloader** altogether. Furthermore, even with current lockdowns, stolen devices can still be disassembled and sold for parts. This argument does not hold.
 
 ### “It prevents attackers from planting malware.”
 
@@ -81,7 +81,7 @@ In 2025, cybersecurity researchers discovered [**Keenadu**](https://www.kaspersk
 
 Similarly, the [**Triada**](https://www.kaspersky.com/blog/trojan-in-fake-smartphones/53331/) trojan has evolved to embed malicious components directly into system partitions, infecting the Zygote process — the parent of all Android applications. Once infected, every app on the device is compromised. Attackers can modify cryptocurrency wallet addresses, steal login credentials, intercept messages, and more.
 
-While it is important to note that such high-profile malware are unlikely to be intentionally embedded by the manufacturers and are more likely examples of [supply chain attach](https://en.wikipedia.org/wiki/Supply_chain_attack), it will be nearly impossible for the cybersecurity researchers to detect and analyze them if the bootloader is locked down permanently.
+While it is important to note that such high-profile malware are unlikely to be intentionally embedded by the manufacturers and are more likely examples of [supply chain attack](https://en.wikipedia.org/wiki/Supply_chain_attack), it will be nearly impossible for the cybersecurity researchers to detect and analyze them if the bootloader is locked down permanently.
 
 These are not hypothetical threats. They are real-world evidence that firmware-level malware exists and thrives in locked-down environments where users cannot audit what runs on their devices.
 
